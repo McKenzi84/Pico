@@ -26,11 +26,11 @@ class StepperMotor:
         mode_pins[2].value(resolution[step_type][2])
 
     def run(self, steps, clockwise):
-        dir_pin.value(clockwise)
+        self.dir_pin.value(clockwise)
         for i in range(steps):
-            step_pin.value(1)
+            self.step_pin.value(1)
             sleep(self.delay)
-            step_pin.value(0)
+            self.step_pin.value(0)
             sleep(self.delay)
 
 
